@@ -11,6 +11,23 @@ public class Stack {
 		size++;
 	}
 	
+	public int pop() {
+		if(top == null) {
+			System.out.println("stack is empty");
+		}
+		int result = top.data;
+		top = top.next;
+		size--;
+		return result;
+	}
+	
+	public int peek() {
+		if(top == null) {
+			System.out.println("stack is empty");
+		}
+		return top.data;
+	}
+	
 	public void display()
 	{
 		Node temp = top;
